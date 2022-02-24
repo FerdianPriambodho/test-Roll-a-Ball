@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour
 
         if (Score == maxCollectible)
         {
+            PlayerPrefs.SetInt("scoreOnLevel", Score);
+            //PlayerPrefs.SetInt("totalScore", PlayerPrefs.GetInt("totalScore") + Score);
             winPanel.SetActive(true);
         }
     }

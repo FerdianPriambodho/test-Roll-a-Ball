@@ -6,10 +6,11 @@ using UnityEngine.UI;
 
 public class WinPanel : MonoBehaviour
 {
-    public GameObject score, winScore;
+    public GameObject winScore;
     void Start()
     {
-        winScore.GetComponent<Text>().text = score.GetComponent<Text>().text;
+        winScore.GetComponent<Text>().text = PlayerPrefs.GetInt("scoreOnLevel").ToString();
+        //Debug.Log(PlayerPrefs.GetInt("totalScore"));
     }
 
     public void onNextButtonClicked()
